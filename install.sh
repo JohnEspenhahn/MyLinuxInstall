@@ -1,7 +1,11 @@
 #! /bin/bash
 
-# Sublime 3
-sudo add-apt-repository --yes ppa:webupd8team/sublime-text-3
-sudo apt-get update
-sudo apt-get install sublime-text-installer
-sudo add-apt-repository --yes --remove ppa:webupd8team/sublime-text-3
+REPOS[0]=ppa:webupd8team/sublime-text-3
+REPOS[1]=curl:nodejs:deb.nodesource.com/setup_7.x
+REPOS[2]=default:build-essential
+
+for i in "${REPOS[@]}"
+do
+	SPLIT=(${i//:/ })
+	bash package_check.sh "${SPLIT[0]}" "${SPLIT[1]}" "${SPLIT[2]}"
+done
