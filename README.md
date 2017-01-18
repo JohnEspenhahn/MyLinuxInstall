@@ -8,8 +8,8 @@ curl -sL https://raw.githubusercontent.com/JohnEspenhahn/MyLinuxInstall/master/w
 Definitions are located in install.sh
 
 The following programs are currently setup to be installed
-0. sublime text
-1. npm 7.x
-2. build-essential for npm
-3. git
-4. npm:typescript
+ 1. sublime text
+ 2. npm 7.x
+ 3. build-essential for npm
+ 4. git
+ 5. npm:typescript
